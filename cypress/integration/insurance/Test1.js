@@ -32,6 +32,7 @@ describe('Insurance Project', () => {
         cy.get('input[value="Save Quotation').should('be.visible')
         cy.get('input[value="Save Quotation').should('not.be.disabled').click()
         cy.get('body b').eq(1).contains('Your identification number is :')
+        cy.log(cy.get('body b').eq(1).text());
         cy.get('body b').eq(1).should('contain','Your identification number is :')
      
     })
